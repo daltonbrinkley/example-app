@@ -1,7 +1,12 @@
 class PagesController < ApplicationController
 
   def fortune_method
-    fortunes = ["You'll be successful", "You will have 100 kids", "You will find love!"]
+    fortunes = [
+      "You'll be successful", 
+      "You will have 100 kids", 
+      "You will find love!"
+    ]
+    
     fortune = fortunes[rand(fortunes.length)]
     render json: fortune
   end
